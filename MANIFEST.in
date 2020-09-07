@@ -1,10 +1,12 @@
-recursive-include django_extensions/conf *.tmpl
-recursive-include django_extensions/templates *.dot *.html
-recursive-include django_extensions/static *
-recursive-include django_extensions/locale *.po *.mo
-recursive-include docs *
 include LICENSE
-include README.rst
-include CHANGELOG.md
-include tox.ini manage.py Makefile
-recursive-include tests *.py
+include Makefile
+include manage.py
+include MANIFEST.in
+include tox.ini
+include *.md
+include *.rst
+graft django_extensions
+graft docs
+graft tests
+global-exclude __pycache__
+global-exclude *.py[co]
